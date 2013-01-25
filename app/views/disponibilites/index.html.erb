@@ -1,0 +1,29 @@
+<h1>Listing disponibilites</h1>
+
+<table>
+  <tr>
+    <th>Id utilisateur</th>
+    <th>Id event calendar</th>
+    <th>Id utilisateur remplacant</th>
+    <th>Statut</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @disponibilites.each do |disponibilite| %>
+  <tr>
+    <td><%= disponibilite.id_utilisateur %></td>
+    <td><%= disponibilite.id_event_calendar %></td>
+    <td><%= disponibilite.id_utilisateur_remplacant %></td>
+    <td><%= disponibilite.statut %></td>
+    <td><%= link_to 'Show', disponibilite %></td>
+    <td><%= link_to 'Edit', edit_disponibilite_path(disponibilite) %></td>
+    <td><%= link_to 'Destroy', disponibilite, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Disponibilite', new_disponibilite_path %>

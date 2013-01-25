@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Id utilisateur:</b>
+  <%= @disponibilite.id_utilisateur %>
+</p>
+
+<p>
+  <b>Id event calendar:</b>
+  <%= @disponibilite.id_event_calendar %>
+</p>
+
+<p>
+  <b>Id utilisateur remplacant:</b>
+  <%= @disponibilite.id_utilisateur_remplacant %>
+</p>
+
+<p>
+  <b>Statut:</b>
+  <%= @disponibilite.statut %>
+</p>
+
+
+<%= link_to 'Edit', edit_disponibilite_path(@disponibilite) %> |
+<%= link_to 'Back', disponibilites_path %>

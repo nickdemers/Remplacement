@@ -1,0 +1,29 @@
+<%= form_for(@disponibilite) do |f| %>
+  <% if @disponibilite.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@disponibilite.errors.count, "error") %> prohibited this disponibilite from being saved:</h2>
+
+      <ul>
+      <% @disponibilite.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :id_utilisateur %><br />
+    <%= f.number_field :id_utilisateur %>
+  </div>
+  <div class="field">
+    <%= f.label :id_utilisateur_remplacant %><br />
+    <%= f.number_field :id_utilisateur_remplacant %>
+  </div>
+  <div class="field">
+    <%= f.label :statut %><br />
+    <%= f.text_field :statut %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
